@@ -9,6 +9,6 @@ export function addNewQueue({value}){
 
 export function showQueue(){
   axios.get('https://jsonplaceholder.typicode.com/users')
-  .then(res => console.log(Object.keys(res).length))
+  .then(res => console.log(res.length))
   .catch(err => console.log(err))
 }
