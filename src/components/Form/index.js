@@ -13,7 +13,7 @@ function Form() {
         const customer = new FormData(e.target);
         const value = Object.fromEntries(customer.entries());
 
-        // addNewQueue({value});
+        addNewQueue({value});
         showQueue();
         
     }
