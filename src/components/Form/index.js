@@ -1,33 +1,21 @@
-import React, { useCallback } from "react";
-import bgvideo from "../../media/bgvideo.mp4";
-import logo from "../../image/laoma-logo3.png";
-import getQueueNumber from "./getQueneNumber";
-import { addNewQueue, showQueue } from '../../server/main'
+import React from "react";
+import { addNewQueue } from "../../server/main";
 import styles from "./index.module.css";
 
 function Form() {
+	const getQueneNumber = (e) => {
+		// e.preventDefault();
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+		const customer = new FormData(e.target);
+		const value = Object.fromEntries(customer.entries());
 
-        const customer = new FormData(e.target);
-        const value = Object.fromEntries(customer.entries());
-
-        addNewQueue({value});
-        showQueue();
-        
-    }
+		addNewQueue({ value });
+	};
 
 	return (
 		<div className={styles.container}>
-            <div className={styles.logo}>
-				<img src={logo} alt="LaoMa Logo" />
-            </div>
 			<div className={styles.form_container}>
-            <button className={styles.test} onClick={showQueue}> GET</button>
-				<form action='/#' method='post' id='waitlist'
-					onSubmit={handleSubmit}
-				>
+				<form action="/submitted" id="waitlist" onSubmit={getQueneNumber}>
 					<label htmlFor="name">Name:</label>
 					<br />
 					<input type="text" id="name" name="name" required></input>
@@ -46,20 +34,12 @@ function Form() {
 						required
 					/>
 					<br />
-					<button className={styles.button} type="submit">Add to Queue</button>
+					<button className={styles.button} type="submit">
+						Add to Queue
+					</button>
 				</form>
 			</div>
-			<video
-				className={styles.bgvideo}
-				src={bgvideo}
-				autoPlay
-				loop
-				muted
-				playsInline
-				type="video/mp4"
-			/>
 		</div>
-
 	);
 }
 

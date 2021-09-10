@@ -1,6 +1,27 @@
-.container{
-  display: flex;
+.container {
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+}
+
+.result_background {
+	background-color: #ffffff;
+	opacity: 0.9;
+	z-index: 10;
+	border-radius: 40px;
+	margin: 10px;
+	margin-bottom: 60px;
+}
+
+.result {
+	letter-spacing: 0.1rem;
+	font-family: "Open Sans", sans-serif;
+	/* font-weight: bold; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	padding: 25px;
 }

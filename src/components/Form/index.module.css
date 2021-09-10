@@ -20,16 +20,6 @@ video {
   top:10%;
 }
 
-.logo {
-	z-index: 3;
-	max-width: 600px;
-	position: relative;
-	margin-top: 25px;
-  margin-bottom:25px;
-	-webkit-filter: drop-shadow(5px 5px 10px #222);
-	filter: drop-shadow(5px 5px 10px #222);
-}
-
 .form_container {
 	background-color: #ffffff;
 	opacity: 0.9;
