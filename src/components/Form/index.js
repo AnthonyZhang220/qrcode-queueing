@@ -3,6 +3,9 @@ import { addNewQueue } from "../../server/main";
 import styles from "./index.module.css";
 
 function Form() {
+
+	
+	
 	const getQueneNumber = (e) => {
 		// e.preventDefault();
 
