@@ -84,14 +84,18 @@ sup {
 }
 
 .delivery_icon {
-	color: rgb(61, 49, 49);
 	grid-column-start: 5;
 	grid-column-end: 6;
 	grid-row: 1;
 	display: flex;
 	justify-content: space-evenly;
 	font-size: 1.25rem;
-	text-decoration: none !important;
+}
+
+.ubereat,
+.yelp,
+.insta{
+	text-decoration: rgb(61, 49, 49);
 }
 
 .fa-yelp,
@@ -99,7 +103,6 @@ sup {
 .uber_logo {
 	justify-self: center;
 	align-self: center;
-	text-decoration: none !important;
 	color: rgb(61, 49, 49);
 }
 

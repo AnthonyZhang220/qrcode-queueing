@@ -40,13 +40,13 @@ export default class Footer extends Component {
             Created & Designed by Anthony Zhang
           </div>
           <div className={styles.delivery_icon}>
-            <a href="https://www.ubereats.com/store/lao-ma-spicy-%E8%80%81%E5%AA%BD%E9%BA%BB%E8%BE%A3%E7%87%99/7BL09unDTgOoPhVr8lEmVw" target="_blank" rel='noreferrer'>
+            <a className={styles.ubereat} href="https://www.ubereats.com/store/lao-ma-spicy-%E8%80%81%E5%AA%BD%E9%BA%BB%E8%BE%A3%E7%87%99/7BL09unDTgOoPhVr8lEmVw" target="_blank" rel='noreferrer'>
               <img className={styles.uber_logo} src={uber_logo} alt="uber eat" />
             </a>
-            <a href='https://www.yelp.com/biz/laoma-spicy-new-york-2' target="_blank" rel='noreferrer'>
+            <a className={styles.yelp} href='https://www.yelp.com/biz/laoma-spicy-new-york-2' target="_blank" rel='noreferrer'>
               <i className="fab fa-yelp"></i>
             </a>
-            <a href='https://www.instagram.com/laomaspicy/' target="_blank" rel='noreferrer'>
+            <a className={styles.insta} href='https://www.instagram.com/laomaspicy/' target="_blank" rel='noreferrer'>
               <i className="fab fa-instagram"></i>
             </a>
 
