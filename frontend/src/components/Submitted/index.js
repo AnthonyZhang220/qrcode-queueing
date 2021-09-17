@@ -8,7 +8,7 @@ class Submitted extends Component {
 	};
 
 	componentDidMount() {
-		axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
+		axios.get("/api/items").then((res) => {
 			this.setState({ queue: `${res.data.length}` });
 		});
 	}

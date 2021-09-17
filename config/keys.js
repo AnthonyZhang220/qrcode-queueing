@@ -1,3 +1,3 @@
 module.exports ={
-    mongoURI: process.env.API_KEY
+    mongoURI: "mongodb+srv://Anthony:zhangxiangyu1997@laoma-queueing.binqb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 }

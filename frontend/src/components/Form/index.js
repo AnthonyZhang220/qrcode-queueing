@@ -1,9 +1,9 @@
 import React from "react";
-import { addNewQueue } from "../../server/main";
+// import { addNewQueue } from "../../server/main";
+import axios from 'axios';
 import styles from "./index.module.css";
 
 function Form() {
-
 	
 	
 	const getQueneNumber = (e) => {
@@ -12,7 +12,11 @@ function Form() {
 		const customer = new FormData(e.target);
 		const value = Object.fromEntries(customer.entries());
 
-		addNewQueue({ value });
+		// addNewQueue({ value });
+		axios
+		.post("/api/items",  value )
+		.then((res) => console.log(res))
+		.catch((err) => console.log(err));
 	};
 
 	return (
