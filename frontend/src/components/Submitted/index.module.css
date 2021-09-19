@@ -25,3 +25,7 @@
 	flex-direction: column;
 	padding: 25px;
 }
+
+h1{
+	font-size: 3rem;
+}
