@@ -2,7 +2,8 @@
   "name": "server-side",
   "version": "1.0.0",
   "engines":{
-    "node": "16.7.0"
+    "node": "16.x",
+    "npm": "7.24.0"
   },
   "description": "qr-code queueing backend server",
   "main": "server.js",
