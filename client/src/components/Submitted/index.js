@@ -7,13 +7,17 @@ class Submitted extends Component {
 		queue: "",
 		name: "",
 		numberofpeople: "",
+		time: "",
 	};
 
 	componentDidMount() {
 		axios.get("/api/items").then((res) => {
 			this.setState({ queue: `${res.data.length}` });
 			this.setState({ name: `${res.data[res.data.length - 1].name}` });
-			this.setState({ numberofpeople: `${res.data[res.data.length - 1].numberofpeople}` });
+			this.setState({
+				numberofpeople: `${res.data[res.data.length - 1].numberofpeople}`
+			});
+			this.setState({ time: `${res.data[res.data.length - 1].date}` });
 		});
 	}
 
@@ -26,6 +30,7 @@ class Submitted extends Component {
 						<h1>{this.state.queue}</h1>
 						<h3>Guest: {this.state.name}</h3>
 						<h3>Table for: {this.state.numberofpeople} </h3>
+						<p>{this.state.time}</p>
 						<p>Please DO NOT refresh this page.</p>
 					</div>
 				</div>

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
+const moment = require('moment') 
 const Schema = mongoose.Schema;
-
-let now = new Date();
 
 const ItemSchema = new Schema({
     name:{
@@ -20,8 +19,8 @@ const ItemSchema = new Schema({
     },
 
     date: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: moment().format('MMMM Do YYYY, h:mm:ss a')
     }
 });
 
